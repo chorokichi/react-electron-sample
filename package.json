@@ -5,12 +5,24 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "electron": "^1.8.4",
+    "foreman": "^2.0.0"
   },
+  "homepage": "./",
+  "main": "src/electron-starter.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron": "node_modules/.bin/electron .",
+    "dev": "nf start -p 3000",
+    "mac-package": "electron-packager . hoge --platform=darwin --arc=x64 --out=release"
+  },
+  "devDependencies": {
+    "add": "^2.0.6",
+    "electron-packager": "^12.0.1",
+    "yarn": "^1.6.0"
   }
 }
